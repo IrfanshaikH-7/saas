@@ -1,3 +1,4 @@
+"use server"
 import { NextResponse } from "next/server";
 import { Configuration, OpenAIApi} from "openai"
 import { increaseApiLimit, checkApiLimit } from "@/lib/api-limit"
