@@ -67,11 +67,10 @@ const routes = [
         href: "/settings",
     },
    
-]   
+]   //sidebar for mobiles
 interface SidebarProps {
     apiLimitCount: number;
     isPro: boolean
-    // isMobile: boolean
 }
 const Sidebar = ({apiLimitCount = 0,isPro=false,}:SidebarProps) => {
     const pathname = usePathname();
@@ -95,7 +94,6 @@ const Sidebar = ({apiLimitCount = 0,isPro=false,}:SidebarProps) => {
                         key={route.href}
                         className={cn("text-sm group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-white hover:bg-white/10 rounded-lg transition",
                         pathname === route.href ? "text-white bg-white/10" : "text-zinc-400 ")}
-                       
                        >
                             <div className="flex items-center flex-1">
                                 <route.icon className={cn("h-5 w-5 mr-3",route.color)} />
